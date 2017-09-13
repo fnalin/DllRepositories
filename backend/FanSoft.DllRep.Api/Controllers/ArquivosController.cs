@@ -28,5 +28,18 @@ namespace FanSoft.DllRep.Api.Controllers
             return Ok(arquivos);
         }
 
+        [HttpPost()]
+        public async Task<IActionResult> Upload()
+        {
+            var files = Request.Form.Files;
+
+            foreach (var file in files)
+            {
+                // to do save
+            }
+
+            return Ok();
+        }
+
     }
 }
